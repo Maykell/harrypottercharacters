@@ -1,7 +1,7 @@
 import axios, { AxiosError } from 'axios';
 import type { HttpClient, HttpRequest, HttpResponse } from '../types';
 
-export const _axios = axios.create({
+const _axios = axios.create({
   headers: {
     accept: 'application/json',
   },

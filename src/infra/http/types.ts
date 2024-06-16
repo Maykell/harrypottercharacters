@@ -8,6 +8,7 @@ export enum HttpStatusCode {
   NotFound = 404,
   ServerError = 500,
 }
+
 export type HttpHeader = Record<string, string>;
 
 export type HttpRequest = {
