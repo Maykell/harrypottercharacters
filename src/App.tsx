@@ -1,13 +1,17 @@
 import React from 'react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Characters from './screens/Characters/CharactersScreen';
 
-const queryClient = new QueryClient();
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import CharactersScreen from './presentation/screens/CharactersScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Characters />
-    </QueryClientProvider>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Characters" component={CharactersScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
